@@ -1,0 +1,112 @@
+:root {
+  --slate-gray: #a1a2a6;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  color: var(--slate-gray);
+}
+
+header {
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+main {
+  & #hero {
+    & img {
+      max-width: 100%;
+    }
+  }
+
+  & #features {
+    & nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      & span {
+        width: 100%;
+        padding: 1.6rem 0;
+        border-top: 1px solid var(--slate-gray);
+      }
+
+      & span:last-child {
+        border-bottom: 1px solid var(--slate-gray);
+      }
+    }
+  }
+
+  & #extension-browsers {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & .extension-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.6rem;
+      box-shadow: 1px 0.5rem 0.75rem 0 rgba(0, 0, 0, 0.3);
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.25rem dotted rgba(0, 0, 0, 0.15);
+        padding: 2rem 4rem;
+
+        & img {
+          max-width: 50%;
+        }
+      }
+
+      & button {
+        margin: 2rem;
+      }
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem -0.6rem rgba(0, 0, 0, 0.45);
+  border: 0;
+  color: #f7f7f7;
+  background-color: #506ada;
+}
+
+.secondary-btn {
+  color: black;
+  background-color: seashell;
+}
