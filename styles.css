@@ -71,7 +71,6 @@ main {
         gap: 1rem;
         justify-content: center;
         align-items: center;
-        border-bottom: 0.25rem dotted rgba(0, 0, 0, 0.15);
         padding: 2rem 4rem;
 
         & img {
