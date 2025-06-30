@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
+    <script type="module" src="index.js"></script>
+    <title>Bookmarks</title>
   </head>
   <body>
     <header>
@@ -12,19 +13,29 @@
         src="./assets/img/logo-bookmark.svg"
         alt="Bookmark logo for the header"
       />
+      <nav id="main-menu">
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">CONTACT</a>
+        <a href="#">LOGIN</a>
+      </nav>
+      <img id="bgr-logo" src="./assets/img/icon-hamburger.svg" alt="icon" />
     </header>
     <main>
       <section id="hero">
-        <img src="./assets/img/illustration-hero.svg" alt="" />
-        <h1>A Simple Bookmark Manager</h1>
-        <span>
-          A clean and simple interface to organize your favorite websites. Open
-          a new browser tab and see your sites load instantly. Try it for free.
-        </span>
-        <div>
-          <button>Get it on Chrome</button>
-          <button class="secondary-btn">Get it on Firefox</button>
+        <div id="hero-text">
+          <h1>A Simple Bookmark Manager</h1>
+          <span>
+            A clean and simple interface to organize your favorite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </span>
+          <div>
+            <a>Get it on Chrome</a>
+            <a class="secondary-btn">Get it on Firefox</a>
+          </div>
         </div>
+        <img src="./assets/img/illustration-hero.svg" alt="" />
       </section>
       <section id="features">
         <h2>Features</h2>
@@ -34,9 +45,15 @@
           them on the go.
         </span>
         <nav>
-          <span> Simple Bookmarking </span>
-          <span> Speedy Searching </span>
-          <span> Easy Sharing </span>
+          <div class="menu-element">
+            <span class="selected">Simple Bookmarking</span>
+          </div>
+          <div class="menu-element">
+            <span> Speedy Searching </span>
+          </div>
+          <div class="menu-element">
+            <span> Easy Sharing </span>
+          </div>
         </nav>
         <!--Menu with the behaviour pending-->
       </section>
@@ -57,7 +74,7 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <button>Add & install extension</button>
+            <a>Add & install extension</a>
           </article>
           <article class="extension-card">
             <div>
@@ -69,7 +86,7 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <button>Add & install extension</button>
+            <a>Add & install extension</a>
           </article>
           <article class="extension-card">
             <div>
@@ -81,10 +98,98 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <button>Add & install extension</button>
+            <a>Add & install extension</a>
           </article>
         </div>
       </section>
+      <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <span
+          >Here are some of our FAQs. If you have any other questions you'd like
+          answered please feel free to email us.</span
+        >
+        <div>
+          <article class="open-question">
+            <div class="faqs-question open-question">
+              <h3>What is Bookmark?</h3>
+              <img class="arrow" src="./assets/img/icon-arrow.svg" alt="" />
+            </div>
+            <p>
+              Bookmark is a browser extension which allows you to easily manage
+              your bookmarks. The extension provides simple utilities including
+              but not limited to: searching through your bookmarks, categorizing
+              them into collections, sharing bookmarks and much more.
+            </p>
+          </article>
+          <article class="closed-question">
+            <div class="faqs-question">
+              <h3>How can I request a new browser?</h3>
+              <img class="arrow" src="./assets/img/icon-arrow.svg" alt="" />
+            </div>
+            <p>
+              We conduct frequent polls through our newsletter if you wish to
+              voice your opinion on which browsers should be prioritized. We
+              will almost always choose to work on the browsers that have the
+              most demand.
+            </p>
+          </article>
+          <article class="open-question">
+            <div class="faqs-question">
+              <h3>Is there a mobile app?</h3>
+              <img class="arrow" src="./assets/img/icon-arrow.svg" alt="" />
+            </div>
+            <p>
+              Currently there are no plans for developing a mobile app. However,
+              if there is enough demand for it, we're definitely willing to
+              develop one for you!
+            </p>
+          </article>
+          <article class="open-question">
+            <div class="faqs-question">
+              <h3>What about other Chromium browsers?</h3>
+              <img class="arrow" src="./assets/img/icon-arrow.svg" alt="" />
+            </div>
+            <p>
+              We're hard at work in developing compatible extensions for other
+              chromium browsers such as Microsoft Edge and Brave.
+            </p>
+          </article>
+          <a href="#">More Info</a>
+        </div>
+      </section>
     </main>
+    <footer>
+      <section id="contact">
+        <span> 35,000+ ALREADY JOINED </span>
+        <h3>Stay up-tp-date with what we're doing</h3>
+        <form action="submit">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+            title="Whoops, make sure it's an email"
+          />
+          <input type="button" value="Contact Us" class="terciary-btn" />
+        </form>
+      </section>
+      <section id="footer-links">
+        <div id="links-container">
+          <nav>
+            <a href="">
+              <img src="./assets/img/logo-bookmark.svg" alt="" />
+            </a>
+            <a href="#">FEATURES</a>
+            <a href="#">PRICING</a>
+            <a href="#">CONTACT</a>
+          </nav>
+          <div>
+            <a href="#"><img src="./assets/img/icon-facebook.svg" alt="" /></a>
+            <a href="#"><img src="./assets/img/icon-twitter.svg" alt="" /></a>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
