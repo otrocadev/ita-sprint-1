@@ -87,7 +87,7 @@ header {
     }
   }
 
-  #main-menu {
+  #masin-menu {
     a {
       color: #252944;
       background: none;
@@ -99,6 +99,9 @@ header {
 main {
   max-width: 1024px;
   margin: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 
   #hero {
     display: flex;
@@ -116,6 +119,9 @@ main {
 
     img {
       max-width: 100%;
+      @media only screen and (min-width: 720px) {
+        max-width: 50%;
+      }
     }
   }
 
@@ -162,7 +168,7 @@ main {
     flex-direction: column;
     gap: 2rem;
 
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: 720px) {
       flex-direction: row;
     }
 
@@ -173,12 +179,14 @@ main {
       border-radius: 0.6rem;
       box-shadow: 1px 0.5rem 0.75rem 0 rgba(0, 0, 0, 0.3);
 
-      &:nth-child(2) {
-        margin-top: 2rem;
-      }
+      @media only screen and (min-width: 720px) {
+        &:nth-child(2) {
+          margin-top: 2rem;
+        }
 
-      &:last-child {
-        margin-top: 4rem;
+        &:last-child {
+          margin-top: 4rem;
+        }
       }
 
       div {
@@ -204,27 +212,26 @@ main {
     max-width: 30rem;
     margin: auto;
 
-    .open-question {
-      .arrow {
-        transform: rotateX(180deg);
-      }
+    details[open] > summary > img {
+      transform: rotate(180deg);
     }
 
-    .closed-question {
-      p {
-        height: 0px;
-        overflow: hidden;
-        padding: 0;
-        background-color: red;
-      }
-    }
-
-    .faqs-question {
+    summary {
+      width: 100%;
+      text-align: left;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 2rem 0;
       border-bottom: 1px solid var(--slate-gray);
+
+      @media only screen and (min-width: 480px) {
+        width: 30rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     p {
