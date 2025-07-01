@@ -82,12 +82,6 @@ header {
     }
   }
 
-  @media only screen and (max-width: 720px) {
-    #main-menu {
-      display: none;
-    }
-  }
-
   a {
     color: #252944;
     background: none;
@@ -99,6 +93,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    @media only screen and (max-width: 720px) {
+      display: none;
+    }
 
     #login-btn {
       padding: 0.6rem 2rem;
