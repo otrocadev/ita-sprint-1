@@ -57,6 +57,10 @@ a {
   }
 }
 
+.inactive {
+  display: none;
+}
+
 .secondary-btn {
   color: black;
   background-color: seashell;

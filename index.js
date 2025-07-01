@@ -7,10 +7,14 @@ const closeMenuBtn = document.getElementById('close-menu-btn')
 
 bgrLogo.addEventListener('click', (e) => {
   mobileMenu.classList.add('active')
+  mainLogo.classList.add('inactive')
+  bgrLogo.classList.add('inactive')
 })
 
 closeMenuBtn.addEventListener('click', (e) => {
   mobileMenu.classList.remove('active')
+  mainLogo.classList.remove('inactive')
+  bgrLogo.classList.remove('inactive')
 })
 
 // FEATURES
