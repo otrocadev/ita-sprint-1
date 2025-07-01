@@ -9,15 +9,17 @@
   </head>
   <body>
     <header>
-      <img
-        src="./assets/img/logo-bookmark.svg"
-        alt="Bookmark logo for the header"
-      />
+      <a href="#">
+        <img
+          src="./assets/img/logo-bookmark.svg"
+          alt="Bookmark logo for the header"
+        />
+      </a>
       <nav id="main-menu">
         <a href="#">FEATURES</a>
         <a href="#">PRICING</a>
         <a href="#">CONTACT</a>
-        <a href="#">LOGIN</a>
+        <a href="#" id="login-btn">LOGIN</a>
       </nav>
       <img id="bgr-logo" src="./assets/img/icon-hamburger.svg" alt="icon" />
     </header>
@@ -45,17 +47,53 @@
           them on the go.
         </span>
         <nav>
-          <div class="menu-element">
+          <div id="simple-bookmatking-btn" class="menu-element">
             <span class="selected">Simple Bookmarking</span>
           </div>
-          <div class="menu-element">
+          <div id="speedy-searching-btn" class="menu-element">
             <span> Speedy Searching </span>
           </div>
-          <div class="menu-element">
+          <div id="easy-sharing-btn" class="menu-element">
             <span> Easy Sharing </span>
           </div>
         </nav>
-        <!--Menu with the behaviour pending-->
+        <div id="features-list">
+          <article id="simple-bookmatking" class="selected">
+            <img src="./assets/img/illustration-features-tab-1.svg" alt="" />
+            <div class="feature-text">
+              <h3>Bookmark in one click</h3>
+              <span>
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </span>
+              <a href="#">More Info</a>
+            </div>
+          </article>
+          <article id="speedy-searching">
+            <img src="./assets/img/illustration-features-tab-2.svg" alt="" />
+            <div class="feature-text">
+              <h3>Share your bookmarks</h3>
+              <span>
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </span>
+              <a href="#">More Info</a>
+            </div>
+          </article>
+          <article id="easy-sharing">
+            <img src="./assets/img/illustration-features-tab-3.svg" alt="" />
+            <div class="feature-text">
+              <h3>Bookmark in one click</h3>
+              <span>
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </span>
+              <a href="#">More Info</a>
+            </div>
+          </article>
+        </div>
       </section>
       <section>
         <h2>Download the extension</h2>
@@ -178,7 +216,7 @@
         <div id="links-container">
           <nav>
             <a href="">
-              <img src="./assets/img/logo-bookmark.svg" alt="" />
+              <img src="./assets/img/logo-bookmark-white.svg" alt="" />
             </a>
             <a href="#">FEATURES</a>
             <a href="#">PRICING</a>
