@@ -227,14 +227,25 @@
         <span> 35,000+ ALREADY JOINED </span>
         <h3>Stay up-tp-date with what we're doing</h3>
         <form action="submit">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email address"
-            required
-            title="Whoops, make sure it's an email"
-          />
+          <div id="email-input" class="error-status inactive">
+            <div id="input-error">
+              <input
+                type="text"
+                name="email"
+                id="email-text-camp"
+                placeholder="Enter your email address"
+                required
+              />
+              <img
+                id="alert-icon"
+                src="./assets/img/icon-error.svg"
+                class="inactive"
+              />
+            </div>
+            <span id="error-message" class="inactive">
+              Whoops, make sure it's an email
+            </span>
+          </div>
           <input type="button" value="Contact Us" class="terciary-btn" />
         </form>
       </section>

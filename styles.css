@@ -415,11 +415,48 @@ footer {
       }
     }
 
-    input[type='email'] {
+    input[type='text'] {
       padding: 0.6rem 1rem;
       border-radius: 0.2rem;
       border: 0;
+      border-radius: inherit;
       min-width: 16rem;
+    }
+
+    #email-input {
+      border-radius: 0.2rem;
+    }
+
+    .error-status {
+      display: flex;
+      flex-direction: column;
+      border: 4px solid var(--complementary);
+      border-radius: 0.4rem;
+
+      &.inactive {
+        border: 0;
+      }
+
+      #input-error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+        border-radius: inherit;
+
+        img {
+          padding: 1rem;
+        }
+      }
+
+      #error-message {
+        font-size: 12px;
+        letter-spacing: 0;
+        font-style: italic;
+        text-align: left;
+        padding: 0.4rem;
+        background-color: var(--complementary);
+      }
     }
 
     input[type='button'],

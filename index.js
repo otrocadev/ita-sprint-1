@@ -47,12 +47,12 @@ const showSelectedContent = (option) => {
 }
 
 const toggleMenuElement = (option, menuOption) => {
-  if (option.classList.contains('selected')) return 0
+  if (option.classList.contains('selected')) return
   if (!option.classList.contains('selected')) {
     showSelectedContent(option)
     showSelectedMenuOption(menuOption)
   }
-  return 0
+  return
 }
 
 simpleBookmarkingBtn.addEventListener('click', (e) => {
@@ -65,4 +65,33 @@ speedySearchingBtn.addEventListener('click', (e) => {
 
 easySharingBtn.addEventListener('click', (e) => {
   toggleMenuElement(easySharing, easySharingBtn)
+})
+
+// EMAIL VALIDATION
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return re.test(email)
+}
+
+const form = document.getElementsByTagName('form')[0]
+const emailTextCamp = document.getElementById('email-text-camp')
+const emailInput = document.getElementById('email-input')
+const alertIcon = document.getElementById('alert-icon')
+const errorMessage = document.getElementById('error-message')
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  if (!validateEmail(emailTextCamp.value)) {
+    emailInput.classList.remove('inactive')
+    alertIcon.classList.remove('inactive')
+    errorMessage.classList.remove('inactive')
+  }
+
+  if (validateEmail(emailTextCamp.value)) {
+    emailInput.classList.add('inactive')
+    alertIcon.classList.add('inactive')
+    errorMessage.classList.add('inactive')
+  }
 })
