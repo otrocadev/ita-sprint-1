@@ -105,6 +105,76 @@ header {
       transition: transform 300ms ease-in-out;
     }
   }
+
+  #mobile-menu {
+    display: none;
+    top: 0;
+    left: 0;
+    background: #272e47f1;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      button {
+        border: 0;
+        background: none;
+      }
+
+      a {
+        width: 90%;
+        color: #f7f7f7;
+        font-size: 20px;
+        border-top: 1px solid #f7f7f780;
+        border-radius: 0;
+        letter-spacing: 0.2rem;
+      }
+
+      a:last-child {
+        padding-top: 0;
+      }
+
+      #login-btn-mobile {
+        display: flex;
+        justify-content: center;
+        border: 2px solid #f7f7f780;
+        border-radius: 0.4rem;
+        margin-top: 1rem;
+        padding: 0.4rem 0;
+      }
+    }
+
+    #social {
+      margin-bottom: 2rem;
+    }
+
+    #hero-mobile-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 80vw;
+      margin-top: 1rem;
+
+      a {
+        display: flex;
+        border: none;
+        padding: 2rem 0;
+      }
+    }
+  }
 }
 
 main {

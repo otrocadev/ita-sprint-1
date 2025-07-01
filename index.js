@@ -1,3 +1,19 @@
+// BURGER MENU
+const mainLogo = document.getElementById('main-logo')
+const bgrLogo = document.getElementById('bgr-logo')
+
+const mobileMenu = document.getElementById('mobile-menu')
+const closeMenuBtn = document.getElementById('close-menu-btn')
+
+bgrLogo.addEventListener('click', (e) => {
+  mobileMenu.classList.add('active')
+})
+
+closeMenuBtn.addEventListener('click', (e) => {
+  mobileMenu.classList.remove('active')
+})
+
+// FEATURES
 const simpleBookmarkingBtn = document.getElementById('simple-bookmatking-btn')
 const speedySearchingBtn = document.getElementById('speedy-searching-btn')
 const easySharingBtn = document.getElementById('easy-sharing-btn')
