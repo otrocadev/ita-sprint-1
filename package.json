@@ -1,0 +1,21 @@
+{
+  "name": "sprint-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/:css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otrocadev/ita-sprint-1.git"
+  },
+  "keywords": [],
+  "author": "otrocadev",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/otrocadev/ita-sprint-1/issues"
+  },
+  "homepage": "https://github.com/otrocadev/ita-sprint-1#readme"
+}

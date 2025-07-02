@@ -1,0 +1,466 @@
+@import 'mixins';
+@import 'variables';
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  color: $details-color;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+section {
+  @include basicDisplayFlex();
+  margin-top: 2rem;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem -0.6rem rgba(0, 0, 0, 0.45);
+  border: 0;
+  color: $main-btn-color;
+  background-color: $main-color;
+  transition: transform 300ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.2rem);
+  }
+}
+
+.inactive {
+  display: none;
+}
+
+.secondary-btn {
+  color: black;
+  background-color: seashell;
+}
+
+.terciary-btn {
+  color: white;
+  background-color: $accent-color;
+}
+
+header {
+  @include basicDisplayFlex(row, space-between);
+
+  padding: 1rem;
+  max-height: 2rem;
+  max-width: 1024px;
+  margin: auto;
+
+  @media only screen and (min-width: 720px) {
+    #bgr-logo {
+      display: none;
+    }
+  }
+
+  a {
+    color: $accent-color-2;
+    background: none;
+    box-shadow: none;
+  }
+
+  #main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @media only screen and (max-width: 720px) {
+      display: none;
+    }
+
+    #login-btn {
+      padding: 0.6rem 2rem;
+      color: $main-btn-color;
+      background-color: $accent-color;
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  #mobile-menu {
+    display: none;
+    top: 0;
+    left: 0;
+    background: #272e47f1;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+
+    &.active {
+      @include basicDisplayFlex($justify: space-between);
+      position: fixed;
+    }
+
+    nav {
+      @include basicDisplayFlex();
+
+      button {
+        border: 0;
+        background: none;
+      }
+
+      a {
+        width: 90%;
+        color: $main-btn-color;
+        font-size: 20px;
+        border-top: 1px solid #f7f7f780;
+        border-radius: 0;
+        letter-spacing: 0.2rem;
+      }
+
+      a:last-child {
+        padding-top: 0;
+      }
+
+      #login-btn-mobile {
+        @include basicDisplayFlex();
+        border: 2px solid #f7f7f780;
+        border-radius: 0.4rem;
+        margin-top: 1rem;
+        padding: 0.4rem 0;
+      }
+    }
+
+    #social {
+      margin-bottom: 2rem;
+    }
+
+    #hero-mobile-menu {
+      @include basicDisplayFlex(row, space-between);
+      width: 80vw;
+      margin-top: 1rem;
+
+      a {
+        display: flex;
+        border: none;
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+main {
+  @include basicDisplayFlex();
+
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
+  max-width: 100vw;
+
+  #hero {
+    @include desktopRowAdaptation();
+    display: flex;
+    flex-direction: column-reverse;
+
+    #hero-text {
+      @include basicDisplayFlex();
+      gap: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      @media only screen and (min-width: 720px) {
+        max-width: 50%;
+      }
+    }
+  }
+
+  #features {
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .menu-element {
+        width: 100%;
+        border-bottom: 1px solid $details-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          padding: 1rem 0;
+        }
+
+        .selected {
+          color: black;
+          font-weight: 700;
+          border-bottom: 6px solid $accent-color;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .menu-element:first-child {
+        border-top: 1px solid $details-color;
+      }
+
+      @media only screen and (min-width: 480px) {
+        flex-direction: row;
+
+        .menu-element:first-child {
+          border-top: none;
+        }
+      }
+    }
+
+    #features-list {
+      width: 100%;
+      max-width: 100vw;
+      display: flex;
+    }
+
+    article {
+      display: none;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      margin: auto;
+
+      a {
+        display: none;
+      }
+
+      img {
+        max-width: 100%;
+        margin: auto;
+      }
+
+      .feature-text {
+        @include basicDisplayFlex();
+        gap: 2rem;
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      @media only screen and (min-width: 720px) {
+        flex-direction: row;
+        gap: 6rem;
+
+        .feature-text {
+          justify-content: left;
+          text-align: left;
+        }
+
+        a {
+          display: block;
+          width: fit-content;
+        }
+        img {
+          max-width: 50%;
+        }
+      }
+    }
+
+    .selected {
+      display: flex;
+    }
+  }
+
+  #extension-browsers {
+    @include basicDisplayFlex();
+    @include desktopRowAdaptation();
+
+    gap: 2rem;
+
+    .extension-card {
+      @include basicDisplayFlex();
+      height: fit-content;
+      border-radius: 0.6rem;
+      box-shadow: 1px 0.5rem 0.75rem 0 rgba(0, 0, 0, 0.3);
+
+      @media only screen and (min-width: 720px) {
+        &:nth-child(2) {
+          margin-top: 2rem;
+        }
+
+        &:last-child {
+          margin-top: 4rem;
+        }
+      }
+
+      div {
+        @include basicDisplayFlex();
+        gap: 1rem;
+        padding: 2rem 4rem;
+
+        img {
+          max-width: 50%;
+        }
+      }
+
+      a {
+        margin: 2rem;
+      }
+    }
+  }
+
+  #faqs {
+    max-width: 30rem;
+    margin: auto;
+
+    details[open] > summary > img {
+      transform: rotate(180deg);
+    }
+
+    summary {
+      @include basicDisplayFlex(row, space-between);
+      width: 100%;
+      text-align: left;
+      padding: 2rem 0;
+      border-bottom: 1px solid $details-color;
+
+      @media only screen and (min-width: 480px) {
+        width: 30rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p {
+      padding: 1rem 0;
+      text-align: left;
+    }
+
+    a {
+      margin: 1rem 0;
+    }
+  }
+}
+
+footer {
+  background-color: $main-color;
+  color: $main-btn-color;
+
+  span {
+    font-size: 12px;
+    letter-spacing: 0.4rem;
+  }
+
+  h3 {
+    color: inherit;
+    font-size: 24px;
+  }
+
+  #contact {
+    form {
+      @include basicDisplayFlex();
+      @include desktopRowAdaptation();
+
+      gap: 1rem;
+    }
+
+    input[type='text'] {
+      padding: 0.6rem 1rem;
+      border-radius: 0.2rem;
+      border: 0;
+      border-radius: inherit;
+      min-width: 16rem;
+    }
+
+    #email-input {
+      border-radius: 0.2rem;
+    }
+
+    .error-status {
+      display: flex;
+      flex-direction: column;
+      border: 4px solid $accent-color;
+      border-radius: 0.4rem;
+
+      &.inactive {
+        border: 0;
+      }
+
+      #input-error {
+        @include basicDisplayFlex(row);
+        background-color: $main-btn-color;
+        border-radius: inherit;
+
+        img {
+          padding: 1rem;
+        }
+      }
+
+      #error-message {
+        font-size: 12px;
+        letter-spacing: 0;
+        font-style: italic;
+        text-align: left;
+        padding: 0.4rem;
+        background-color: $accent-color;
+      }
+    }
+
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset'] {
+      display: inline-block;
+      font-size: 14px;
+      padding: 0.6rem 1rem;
+      border-radius: 0.2rem;
+      border: 0;
+      color: $main-btn-color;
+      background-color: $accent-color;
+      transition: transform 300ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.2rem);
+      }
+    }
+  }
+
+  #footer-links {
+    background-color: $accent-color-2;
+
+    #links-container {
+      @include basicDisplayFlex($justify: space-between);
+      @include desktopRowAdaptation();
+
+      max-width: 1024px;
+      margin: auto;
+      width: 100%;
+    }
+
+    nav {
+      @include basicDisplayFlex();
+      @include desktopRowAdaptation();
+    }
+
+    a {
+      background: none;
+      box-shadow: none;
+      padding: 1rem;
+    }
+  }
+}
