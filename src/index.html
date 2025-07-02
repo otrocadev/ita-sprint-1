@@ -7,22 +7,27 @@
     <script type="module" src="index.js"></script>
     <title>Bookmarks</title>
   </head>
-  <body>
-    <header>
+  <body class="w-screen max-w-5xl">
+    <header class="flex items-center justify-between px-8 py-10">
       <a id="main-logo" href="#">
         <img
           src="./assets/img/logo-bookmark.svg"
           alt="Bookmark logo for the header"
         />
       </a>
-      <nav id="main-menu">
+      <nav id="main-menu" class="max-sm:hidden">
         <a href="#">FEATURES</a>
         <a href="#">PRICING</a>
         <a href="#">CONTACT</a>
         <a href="#" id="login-btn">LOGIN</a>
       </nav>
-      <img id="bgr-logo" src="./assets/img/icon-hamburger.svg" alt="icon" />
-      <div id="mobile-menu">
+      <img
+        id="bgr-logo"
+        src="./assets/img/icon-hamburger.svg"
+        alt="icon"
+        class="sm:hidden"
+      />
+      <div id="mobile-menu" class="hidden">
         <nav>
           <div id="hero-mobile-menu">
             <a href="#"
@@ -49,18 +54,25 @@
         </div>
       </div>
     </header>
-    <main>
-      <section id="hero">
-        <div id="hero-text">
-          <h1 class="text-red-500">A Simple Bookmark Manager</h1>
-          <span>
+    <main class="flex flex-col mt-4">
+      <section
+        id="hero"
+        class="flex flex-col-reverse items-center justify-center"
+      >
+        <div id="hero-text" class="text-center flex flex-col gap-4">
+          <h1 class="text-4xl">A Simple Bookmark Manager</h1>
+          <span class="p-4 text-gray-400">
             A clean and simple interface to organize your favorite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </span>
-          <div>
-            <a>Get it on Chrome</a>
-            <a class="secondary-btn">Get it on Firefox</a>
+          <div class="flex justify-center gap-4">
+            <a class="bg-principal text-white p-4 rounded-md shadow"
+              >Get it on Chrome</a
+            >
+            <a class="bg-gray-200 text-black p-4 rounded-md shadow"
+              >Get it on Firefox</a
+            >
           </div>
         </div>
         <img src="./assets/img/illustration-hero.svg" alt="" />
