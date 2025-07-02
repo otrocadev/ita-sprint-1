@@ -1,0 +1,24 @@
+{
+  "name": "sprint-1-tailwind",
+  "version": "1.0.0",
+  "description": "![Vanilla aproach](assets/img/screenshoot-tailwind.png)",
+  "homepage": "https://github.com/otrocadev/ita-sprint-1#readme",
+  "bugs": {
+    "url": "https://github.com/otrocadev/ita-sprint-1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otrocadev/ita-sprint-1.git"
+  },
+  "license": "ISC",
+  "author": "otrocadev",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}
