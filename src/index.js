@@ -84,14 +84,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
 
   if (!validateEmail(emailTextCamp.value)) {
-    emailInput.classList.remove('inactive')
-    alertIcon.classList.remove('inactive')
-    errorMessage.classList.remove('inactive')
+    emailInput.classList.remove('hidden')
+    alertIcon.classList.remove('hidden')
+    errorMessage.classList.remove('hidden')
   }
 
   if (validateEmail(emailTextCamp.value)) {
-    emailInput.classList.add('inactive')
-    alertIcon.classList.add('inactive')
-    errorMessage.classList.add('inactive')
+    emailInput.classList.add('hidden')
+    alertIcon.classList.add('hidden')
+    errorMessage.classList.add('hidden')
   }
 })

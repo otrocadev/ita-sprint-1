@@ -15,11 +15,22 @@
           alt="Bookmark logo for the header"
         />
       </a>
-      <nav id="main-menu" class="max-sm:hidden">
-        <a href="#">FEATURES</a>
-        <a href="#">PRICING</a>
-        <a href="#">CONTACT</a>
-        <a href="#" id="login-btn">LOGIN</a>
+      <nav id="main-menu" class="flex items-center gap-8 max-sm:hidden">
+        <a href="#" class="hover:cursor-pointer hover:text-secondary"
+          >FEATURES</a
+        >
+        <a href="#" class="hover:cursor-pointer hover:text-secondary"
+          >PRICING</a
+        >
+        <a href="#" class="hover:cursor-pointer hover:text-secondary"
+          >CONTACT</a
+        >
+        <a
+          href="#"
+          class="px-8 py-2 text-white border-2 border-secondary bg-secondary rounded-lg hover:cursor-pointer hover:bg-transparent hover:text-secondary"
+          id="login-btn"
+          >LOGIN</a
+        >
       </nav>
       <img
         id="bgr-logo"
@@ -67,10 +78,12 @@
             free.
           </span>
           <div class="flex justify-center gap-4">
-            <a class="bg-principal text-white p-4 rounded-md shadow"
+            <a
+              class="bg-principal p-4 text-white rounded-lg hover:cursor-pointer border-2 hover:border-principal hover:bg-transparent hover:text-principal"
               >Get it on Chrome</a
             >
-            <a class="bg-gray-200 text-black p-4 rounded-md shadow"
+            <a
+              class="bg-gray-200 text-black p-4 rounded-lg shadow hover:cursor-pointer border-2 border-gray-200 hover:border-gray-900 hover:bg-transparent hover:text-gray-900"
               >Get it on Firefox</a
             >
           </div>
@@ -152,7 +165,9 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <a class="bg-principal px-8 py-4 text-white rounded-lg my-6"
+            <a
+              href="#"
+              class="bg-principal px-8 py-4 text-white rounded-lg my-6 hover:cursor-pointer border-2 hover:border-principal hover:bg-transparent hover:text-principal"
               >Add & install extension</a
             >
           </article>
@@ -168,7 +183,9 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <a class="bg-principal px-8 py-4 text-white rounded-lg my-6"
+            <a
+              href="#"
+              class="bg-principal px-8 py-4 text-white rounded-lg my-6 hover:cursor-pointer border-2 hover:border-principal hover:bg-transparent hover:text-principal"
               >Add & install extension</a
             >
           </article>
@@ -184,7 +201,9 @@
               src="./assets/img/bg-dots.svg"
               alt="A dotted pattern for separating purposes"
             />
-            <a class="bg-principal px-8 py-4 text-white rounded-lg my-6"
+            <a
+              href="#"
+              class="bg-principal px-8 py-4 text-white rounded-lg my-6 hover:cursor-pointer border-2 hover:border-principal hover:bg-transparent hover:text-principal"
               >Add & install extension</a
             >
           </article>
@@ -246,47 +265,67 @@
         </div>
       </section>
     </main>
-    <footer>
-      <section id="contact">
-        <span> 35,000+ ALREADY JOINED </span>
-        <h3>Stay up-tp-date with what we're doing</h3>
-        <form action="submit">
-          <div id="email-input" class="error-status inactive">
-            <div id="input-error">
+    <footer class="text-white">
+      <section
+        id="contact"
+        class="flex flex-col bg-principal items-center gap-8 p-12"
+      >
+        <span class="tracking-wider"> 35,000+ ALREADY JOINED </span>
+        <h3 class="text-2xl max-w-72 text-center">
+          Stay up-to-date with what we're doing
+        </h3>
+        <form
+          action="submit"
+          class="flex flex-col items-center md:flex-row md:items-start justify-center gap-4"
+        >
+          <div
+            id="email-input"
+            class="error-status w-80 md:w-sm bg-secondary rounded-lg"
+          >
+            <div
+              id="input-error"
+              class="flex w-full items-center justify-between bg-white p-2 rounded-md"
+            >
               <input
                 type="text"
                 name="email"
                 id="email-text-camp"
                 placeholder="Enter your email address"
                 required
+                class="w-full text-black"
               />
               <img
                 id="alert-icon"
                 src="./assets/img/icon-error.svg"
-                class="inactive"
+                class="hidden h-full pl-2"
               />
             </div>
-            <span id="error-message" class="inactive">
+            <span id="error-message" class="hidden italic p-2">
               Whoops, make sure it's an email
             </span>
           </div>
-          <input type="button" value="Contact Us" class="terciary-btn" />
+          <input
+            type="button"
+            value="Contact Us"
+            class="md:w-fit w-80 px-8 py-2 text-white border-secondary border-2 bg-secondary rounded-lg hover:cursor-pointer hover:bg-white hover:text-secondary"
+          />
         </form>
       </section>
-      <section id="footer-links">
-        <div id="links-container">
-          <nav>
-            <a href="">
-              <img src="./assets/img/logo-bookmark-white.svg" alt="" />
-            </a>
-            <a href="#">FEATURES</a>
-            <a href="#">PRICING</a>
-            <a href="#">CONTACT</a>
-          </nav>
-          <div>
-            <a href="#"><img src="./assets/img/icon-facebook.svg" alt="" /></a>
-            <a href="#"><img src="./assets/img/icon-twitter.svg" alt="" /></a>
-          </div>
+      <section
+        id="footer-links"
+        class="bg-footer-bg flex flex-col items-center gap-8 p-8"
+      >
+        <nav class="flex flex-col items-center justify-cente gap-4">
+          <a href="">
+            <img src="./assets/img/logo-bookmark-white.svg" alt="" />
+          </a>
+          <a href="#">FEATURES</a>
+          <a href="#">PRICING</a>
+          <a href="#">CONTACT</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="#"><img src="./assets/img/icon-facebook.svg" alt="" /></a>
+          <a href="#"><img src="./assets/img/icon-twitter.svg" alt="" /></a>
         </div>
       </section>
     </footer>
