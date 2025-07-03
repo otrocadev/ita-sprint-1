@@ -1,6 +1,6 @@
 # Sprint 1 - IT Academy FrontEnd Course (Tailwind CSS aproach)
 
-![Tailwind aproach](assets/img/screenshoot-tailwind.png)
+![Tailwind aproach](src/assets/img/screenshoot-tailwind.png)
 
 This first sprint aims to create a simple landing page using three diferent aproaches:
 - Vanilla (HTML + CSS + JavaScript)
