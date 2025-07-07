@@ -6,44 +6,54 @@ const mobileMenu = document.getElementById('mobile-menu')
 const closeMenuBtn = document.getElementById('close-menu-btn')
 
 bgrLogo.addEventListener('click', (e) => {
-  mobileMenu.classList.add('active')
-  mainLogo.classList.add('inactive')
-  bgrLogo.classList.add('inactive')
+  mobileMenu.classList.remove('hidden')
+  mainLogo.classList.add('hidden')
+  bgrLogo.classList.add('hidden')
 })
 
 closeMenuBtn.addEventListener('click', (e) => {
-  mobileMenu.classList.remove('active')
-  mainLogo.classList.remove('inactive')
-  bgrLogo.classList.remove('inactive')
+  mobileMenu.classList.add('hidden')
+  mainLogo.classList.remove('hidden')
+  bgrLogo.classList.remove('hidden')
+})
+
+mobileMenu.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden')
+    mainLogo.classList.remove('hidden')
+    bgrLogo.classList.remove('hidden')
+  })
 })
 
 // FEATURES
-const simpleBookmarkingBtn = document.getElementById('simple-bookmatking-btn')
+const simpleBookmarkingBtn = document.getElementById('simple-bookmarking-btn')
 const speedySearchingBtn = document.getElementById('speedy-searching-btn')
 const easySharingBtn = document.getElementById('easy-sharing-btn')
 
-const simpleBookmarking = document.getElementById('simple-bookmatking')
+const simpleBookmarking = document.getElementById('simple-bookmarking')
 const speedySearching = document.getElementById('speedy-searching')
 const easySharing = document.getElementById('easy-sharing')
 
 const showSelectedMenuOption = (menuOption) => {
-  simpleBookmarkingBtn
-    .getElementsByTagName('span')[0]
-    .classList.remove('selected')
-  speedySearchingBtn
-    .getElementsByTagName('span')[0]
-    .classList.remove('selected')
-  easySharingBtn.getElementsByTagName('span')[0].classList.remove('selected')
+  simpleBookmarkingBtn.getElementsByTagName('span')[0].className = ''
+  speedySearchingBtn.getElementsByTagName('span')[0].className = ''
+  easySharingBtn.getElementsByTagName('span')[0].className = ''
 
-  menuOption.getElementsByTagName('span')[0].classList.add('selected')
+  menuOption.getElementsByTagName('span')[0].className =
+    'border-b-4 border-secondary py-6'
 }
 
 const showSelectedContent = (option) => {
-  simpleBookmarking.classList.remove('selected')
-  speedySearching.classList.remove('selected')
-  easySharing.classList.remove('selected')
+  simpleBookmarking.classList.remove('flex')
+  speedySearching.classList.remove('flex')
+  easySharing.classList.remove('flex')
 
-  option.className = 'selected'
+  simpleBookmarking.classList.add('hidden')
+  speedySearching.classList.add('hidden')
+  easySharing.classList.add('hidden')
+
+  option.classList.remove('hidden')
+  option.classList.add('flex')
 }
 
 const toggleMenuElement = (option, menuOption) => {
