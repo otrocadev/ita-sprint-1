@@ -35,12 +35,12 @@ const speedySearching = document.getElementById('speedy-searching')
 const easySharing = document.getElementById('easy-sharing')
 
 const showSelectedMenuOption = (menuOption) => {
-  simpleBookmarkingBtn.getElementsByTagName('span')[0].className = ''
-  speedySearchingBtn.getElementsByTagName('span')[0].className = ''
-  easySharingBtn.getElementsByTagName('span')[0].className = ''
+  simpleBookmarkingBtn.getElementsByTagName('span')[0].className = 'md:px-12'
+  speedySearchingBtn.getElementsByTagName('span')[0].className = 'md:px-12'
+  easySharingBtn.getElementsByTagName('span')[0].className = 'md:px-12'
 
   menuOption.getElementsByTagName('span')[0].className =
-    'border-b-4 border-secondary py-6'
+    'border-b-4 border-secondary py-6 md:px-12'
 }
 
 const showSelectedContent = (option) => {
