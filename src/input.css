@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-VariableFont_wght.ttf');
+}
+
+@theme {
+  --color-principal: #5265e1;
+  --color-secondary: #fa5959;
+  --color-footer-bg: #242946;
+
+  --font-rubik: Rubik, Arial, Helvetica, sans-serif;
+}
