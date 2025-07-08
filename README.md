@@ -1,4 +1,4 @@
-# Sprint 1 - IT Academy FrontEnd Course (Tailwind CSS aproach)
+# Sprint 1 - IT Academy FrontEnd Course
 
 ![Tailwind aproach](assets/img/screenshoot-tailwind.png)
 
